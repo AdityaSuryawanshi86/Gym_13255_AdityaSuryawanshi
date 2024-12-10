@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Registration Form</title>
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url("./Images/joinNow_6.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #379c48;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Slight dark background for better contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 16px; /* Curved corners for the form container */
+            width: 500px;
+            margin-left: auto; 
+            margin-right: 0;
+            border-radius: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .form-group label {
+            color: #f3f3f3;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            color: white;
+            border: 1px solid #ddd;
+            border-radius: 12px; /* Curved borders for input and textarea */
+            box-sizing: border-box;
+            background-color: transparent; /* Remove white background */
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button[type="submit"] {
+            background-color: #28a745;
+            color: #0c0505;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 12px; /* Curved borders for button */
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #28a745;
+        }
+
+        .error {
+            color: rgb(245, 237, 237);
+            font-size: 1.9rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1> <i> <u> Register with Us </u> </i> </h1>
+        <form id="registrationForm" action="#" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name">
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="+91 0000000000">
+                <div id="contactError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail" placeholder="eg. abc@gmail.com">
+                <div id="gmailError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Flat no. Area Landmark"></textarea>
+                <div id="addressError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any Medical History"></textarea>
+                <div id="messageError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" value="Submit">submit</button>
+            </div>
+
+            <div>
+                <a href="./index.html" style="color: whitesmoke; place-items: left;" >Back to Home</a>
+            </div>
+        </form>
+
+        <div class="contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Phone:</strong> +91-8605435536</p>
+            <p><strong>Email:</strong> contact@hulkgym.com</p>
+            <p><strong>Address:</strong> 123 Fitness Street, Mumbai, India</p>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/FormVal.js">
+        
+    </script>
+
+</body>
+
+</html>
